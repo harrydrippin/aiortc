@@ -26,6 +26,7 @@ vpx_codec_err_t vpx_codec_enc_init(vpx_codec_ctx_t *ctx,
     return vpx_codec_enc_init_ver(ctx, iface, cfg, flags, VPX_ENCODER_ABI_VERSION);
 }
     """,
+    extra_compile_args=['-fvisibility=protected'],
     libraries=['vpx'])
 
 ffibuilder.cdef("""
